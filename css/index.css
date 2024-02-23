@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  --en: "Rubik", sans-serif;
+  --ko: "Gothic A1", sans-serif;
+}
+* {
+  font-family: var(--en);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: #fff;
+  font-size: 1.6rem;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(to right, #17161a, #242124 50%, #17161a);
+  font-size: 1rem;
+  padding: 2rem;
+}
+
+.game-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 5.4rem 3rem;
+  & a {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+  }
+}
+
+.game-pic {
+  position: relative;
+  grid-column: 1 / -1;
+  & img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+  .--thumb {
+    display: block;
+    .--active & {
+      display: none;
+    }
+  }
+  .--gif {
+    display: none;
+    .--active & {
+      display: block;
+    }
+  }
+}
+.game-title-kor {
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-family: var(--ko);
+  padding: 2.4rem 0 0;
+}
+.game-title-en {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.game-number {
+  padding: 2.4rem 0 0;
+  grid-column: 2/3;
+  grid-row: 2/4;
+  align-self: center;
+  font-family: var(--en);
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
